@@ -26,9 +26,9 @@ div[class^="card-"] {
 
 h2 {
   font-family: 'Zilla Slab', serif;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 0.06rem;
-  font-weight: lighter;
+  font-weight: 400;
 }
 
 
@@ -40,10 +40,10 @@ p {
 
 h3 {
   font-family: 'Roboto';
-  font-weight: 450;
-  font-size: 15px;
-  letter-spacing: 0.01rem;
-  line-height: 130%;
+  font-weight: 350;
+  font-size: 16px;
+  letter-spacing: 0.02rem;
+  line-height: 135%;
 }
 
 a {
@@ -51,8 +51,20 @@ a {
   font-size: 15px;
 }
 
+.padding-klein {
+  width: 100%;
+  height: 10px;
+}
 
+.padding {
+  width: 100%;
+  height: 20px;
+}
 
+.padding-gross {
+  width: 100%;
+  height: 60px;
+}
 
 .column-1 {
   grid-column: span 12;
@@ -93,6 +105,23 @@ a {
     padding-right: 16px;
     padding-top: 22px;
   }
+}
+
+.column-1start {
+  grid-column: span 12;
+  @include media(m) {
+    grid-column: span 1;
+    font-size: 8px;
+    padding-right: 20px;
+    padding-top: 18px;
+  }
+}
+
+li {
+  padding: 1.2em;
+  list-style: none;
+  display: inline-block;
+  font-size: 10px;
 }
 
 .column-2 {
@@ -152,8 +181,7 @@ a {
   grid-column: span 12;
   @include media(m) {
     grid-column: span 8;
-    font-size: 8px;
-    padding-top: 23px;
+    padding-top: 13px;
   }
 }
 
@@ -243,19 +271,16 @@ a {
 .card-2-4 {
   grid-column: span 2;
   grid-row: span 4;
-  background-color: grey;
 }
 
 .card-4-2 {
   grid-column: span 4;
   grid-row: span 1;
-  background-color: grey;
 }
 
 .card-6-5 {
   grid-column: span 6;
   grid-row: span 5;
-  background-color: grey;
 }
 
 .card-6-5 hr {
@@ -266,7 +291,7 @@ a {
 .card-4-15 {
   grid-column: span 4;
   grid-row: span 15;
-  background-color: grey;
+  position: relative;
 }
 
 // 24er × 12er Grid
@@ -305,14 +330,19 @@ a {
 .card-16-8 {
   grid-column: span 16;
   grid-row: span 8;
-  background-color: grey;
 }
 
 .card-8-2 {
   grid-column: span 8;
   grid-row: span 2;
-  background-color: grey;
   text-align: center;
+}
+
+.card-14-12 {
+  grid-column: span 14;
+  grid-row: span 12;
+  position: relative;
+
 }
 
 .card-8-4 {
@@ -320,31 +350,69 @@ a {
   grid-row: span 4;
   padding-top: 5px;
   padding-bottom: 1px;
-  color: red;
-  background-color: red;
+  color: white;
+  background-color: #B3A0F2;
   text-align: center;
   letter-spacing: 0.05rem;
 }
 
-.card-14-12 {
+.teaser-14-12 {
   grid-column: span 14;
   grid-row: span 12;
+  position: relative;
 }
 
-.grid-artikel {
-  grid-auto-flow: dense;
-  display: grid;
-  grid-template-columns: repeat(14, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+.teaser-10-7 {
+  grid-column: span 10;
+  grid-row: span 7;
+  position: relative;
 }
 
-.schwarzer-balken {
-  grid-column-start: 12;
-  grid-column-end: 14;
-  grid-row: span 2;
+.teaser-10-5 {
+  grid-column: span 10;
+  grid-row: span 5;
+  position: relative;
+}
+
+.teaser-bild {
+}
+
+.teaser-tag {
   background-color: black;
   text-align: center;
   color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, 0.7);
+  padding: 10px;
+  font-family: 'Roboto', light;
+  font-size: 12px;
+  letter-spacing: 0.03rem;
+}
+
+.teaser-box {
+  text-align: left;
+  color: black;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(255, 255, 255, 0.9);
+  width: 95%;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.teaser-box p {
+  padding-top: 5px;
+}
+
+.teaser-box img {
+  height: 12px;
+  //width: 2rem;
+  padding-left: 75%;
+  padding-bottom: 10px;
+  padding-right: 10%;
 }
 
 .card-1-12 {
@@ -356,63 +424,62 @@ a {
 .card-10-7 {
   grid-column: span 10;
   grid-row: span 7;
-  background-color: grey;
 }
 
 .card-9-1 {
   grid-column: span 9;
   grid-row: span 1;
-  background-color: red;
 }
 
 .card-10-5 {
   grid-column: span 10;
   grid-row: span 5;
-  background-color: grey;
 }
 
 .card-10-4 {
   grid-column: span 10;
   grid-row: span 4;
-  background-color: grey;
 }
 
 .card-5-5 {
   grid-column: span 5;
   grid-row: span 5;
-  background-color: grey;
 }
 
 .card-7-10 {
   grid-column: span 7;
   grid-row: span 10;
-  background-color: grey;
   margin-right: 30px;
 }
 
 .card-3-10 {
   grid-column: span 3;
   grid-row: span 10;
-  background-color: grey;
 }
 
 .card-24-1 {
   grid-column: span 24;
   grid-row: span 1;
-  background-color: grey;
 }
 
 
   .content-1-3 {
     width: 22%;
-    padding-right: 1%;
     margin: 0 auto;
     display:block;
     vertical-align: middle;
+    position: relative;
+  }
+
+  .content-1-3 p {
+    padding-top: 10px;
+    font-size: 13px;
+    font-weight: 300;
+
   }
 
   .violett {
-    padding-left: 5rem;
+    padding-left: calc(50% - 22rem);
     width:120%;
     margin:0 auto;
     display: flex;
@@ -423,7 +490,7 @@ a {
 
 
   .shop {
-    padding-left: 5rem;
+    padding-left: calc(50% - 22rem);
     width:120%;
     margin:0 auto;
     display: flex;
@@ -470,17 +537,11 @@ a {
     width :100%
   }
 
-  .weiss-bg {
-    background-color: white;
-    height: 30px;
-    width :100%
-  }
 
   .card-mail {
     grid-column: span 8;
     grid-row-start: 2;
     grid-row-end: 2;
-    background-color: grey;
   }
 
   .card-mail-button {
@@ -499,11 +560,15 @@ a {
 
   .white-mail {
     grid-column: span 5;
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
 
   .anmelden-mail {
     grid-column-start: 6;
     grid-column-end: 6;
+    padding-top: 7px;
+    padding-bottom: 7px;
   }
 
   .card-mail-button2 {
@@ -552,19 +617,16 @@ a {
 
   .card-3-5 {
     grid-row: span 5;
-    background-color: grey;
   }
 
   .card-5-3 {
     grid-column: span 5;
     grid-row: span 3;
-    background-color: grey;
   }
 
   .card-1-5 {
     grid-column: span 1;
     grid-row: span 5;
-    background-color: grey;
   }
 
   .card-4-2 img {
