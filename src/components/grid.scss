@@ -52,6 +52,8 @@ a {
 }
 
 
+
+
 .column-1 {
   grid-column: span 12;
   @include media(m) {
@@ -66,7 +68,30 @@ a {
   @include media(m) {
     grid-column: span 1;
     font-size: 8px;
-    padding: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 30px;
+  }
+}
+
+.column-1aa {
+  grid-column: span 12;
+  @include media(m) {
+    grid-column: span 1;
+    font-size: 8px;
+    padding-left: 17px;
+    padding-right: 16px;
+    padding-top: 27px;
+  }
+}
+.column-1aaa {
+  grid-column: span 12;
+  @include media(m) {
+    grid-column: span 1;
+    font-size: 8px;
+    padding-left: 17px;
+    padding-right: 16px;
+    padding-top: 22px;
   }
 }
 
@@ -128,6 +153,7 @@ a {
   @include media(m) {
     grid-column: span 8;
     font-size: 8px;
+    padding-top: 23px;
   }
 }
 
@@ -212,7 +238,6 @@ a {
   width: 55px;
   height: 12px;
   margin-left: 240px;
-
 }
 
 .card-2-4 {
@@ -296,7 +321,7 @@ a {
   padding-top: 5px;
   padding-bottom: 1px;
   color: red;
-  background: red;
+  background-color: red;
   text-align: center;
   letter-spacing: 0.05rem;
 }
@@ -304,8 +329,22 @@ a {
 .card-14-12 {
   grid-column: span 14;
   grid-row: span 12;
-  background-color: grey;
+}
+
+.grid-artikel {
+  grid-auto-flow: dense;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.schwarzer-balken {
+  grid-column-start: 12;
+  grid-column-end: 14;
+  grid-row: span 2;
+  background-color: black;
   text-align: center;
+  color: white;
 }
 
 .card-1-12 {
@@ -445,9 +484,26 @@ a {
   }
 
   .card-mail-button {
-    grid-column: span 6;
+    grid-auto-flow: dense;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0px;
+  }
+
+  .card-button-position {
+    grid-column: span 8;
     grid-row-start: 3;
     grid-row-end: 3;
+  }
+
+  .white-mail {
+    grid-column: span 5;
+  }
+
+  .anmelden-mail {
+    grid-column-start: 6;
+    grid-column-end: 6;
   }
 
   .card-mail-button2 {
@@ -472,21 +528,19 @@ a {
   }
 
   .inner2 {
-    padding-top: 5px;
-    padding-bottom: 1px;
     color: grey;
     background-color: white;
     //border: 0.1rem solid black;
     text-align: left;
-    padding-left: 3px;
+    padding-left: 8px;
     font-weight: lighter;
     letter-spacing: 0.05rem;
     //margin: 0 auto;
   }
 
   .inner1a {
-    padding-top: 5px;
-    padding-bottom: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
     color: white;
     background-color: #B3A0F2;
     //border: 0.1rem solid black;
