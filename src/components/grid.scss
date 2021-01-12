@@ -448,12 +448,12 @@ li:hover {
 }
 
 .teaser-14-12 {
-  grid-column: span 14;
+  grid-column: span 24;
   grid-row: span 12;
   position: relative;
-    @include media(m) {
-    //grid-column: span 24;
-    //grid-row: span 12;
+  @include media(m) {
+    grid-column: span 14;
+    grid-row: span 12;
   }
 }
 
@@ -552,10 +552,15 @@ li:hover {
 
 .teaser-box img {
   height: 12px;
+  width: auto;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  // width: auto;
   //width: 2rem;
-  padding-left: 75%;
-  padding-bottom: 10px;
-  padding-right: 10%;
+  // padding-left: 75%;
+  // padding-bottom: 10px;
+  // padding-right: 10%;
 }
 
 .card-1-12 {
@@ -861,4 +866,21 @@ li:hover {
 
   @media only screen and (max-width: 920px) {
 
+  }
+
+
+.container--first {
+  padding-top: 20rem;
+
+}
+
+
+  .test-nav {
+    position: fixed;
+    z-index: 1;
+    background-color: red;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 20rem;
   }
