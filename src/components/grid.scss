@@ -54,14 +54,26 @@ p {
 h3 {
   font-family: 'Roboto';
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
   letter-spacing: 0.02rem;
+  @include media(m) {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.02rem;
+  }
 }
+
 
 h4 {
   font-weight: 300;
-  font-size: 12px;
+  font-size: 9px;
   padding-bottom: 20px;
+  @include media(m) {
+    font-weight: 300;
+    font-size: 12px;
+    padding-bottom: 20px;
+  }
 }
 
 h5 {
@@ -82,7 +94,11 @@ h6 {
 
 a {
   color: red;
-  font-size: 12px;
+  font-size: 9px;
+  @include media(m) {
+    color: red;
+    font-size: 12px;
+  }
 }
 
 
@@ -102,8 +118,12 @@ a {
 }
 
 .padding-gross {
-  width: 100%;
-  height: 60px;
+  display: none;
+  @include media(m) {
+    width: 100%;
+    height: 60px;
+    display: block;
+  }
 }
 
 .column-1 {
@@ -467,15 +487,24 @@ li:hover {
 }
 
 .card-16-8 {
-  grid-column: span 16;
-  grid-row: span 8;
+  grid-column: span 24;
+  grid-row: span 10;
+  padding-top: 10px;
+  @include media(m) {
+    grid-column: span 16;
+    grid-row: span 8;
+  }
 }
 
 .card-8-2 {
-  grid-column: span 8;
-  grid-row: span 2;
-  text-align: center;
-  font-weight: 400;
+  display: none;
+  @include media(m) {
+    grid-column: span 8;
+    grid-row: span 2;
+    text-align: center;
+    font-weight: 400;
+    display: block;
+  }
 }
 
 .card-8-2 p:hover {
@@ -503,20 +532,25 @@ li:hover {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-bottom: 20px;
   @include media(m) {
     display: none;
   }
 }
 
 .card-8-4 {
-  grid-column: span 8;
-  grid-row: span 2;
-  position: relative;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 20px;
-  color: #B3A0F2;
-  height: 90px;
+  display: none;
+  @include media(m) {
+    grid-column: span 8;
+    grid-row: span 2;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    color: #B3A0F2;
+    height: 90px;
+    display: block;
+  }
 
 }
 
@@ -718,6 +752,15 @@ li:hover {
   }
 }
 
+.card-5-5-mobile {
+  grid-column: span 8;
+  position: relative;
+  display: block;
+  @include media(m) {
+    display: none
+  }
+}
+
 .card-7-10 {
   grid-column: span 7;
   grid-row: span 10;
@@ -743,6 +786,33 @@ li:hover {
     position: relative;
   }
 
+  .content-1-3-shop {
+    width: 26%;
+    margin: 0 auto;
+    display:block;
+    vertical-align: middle;
+    position: relative;
+    @include media(m) {
+      width: 22%;
+      margin: 0 auto;
+      display:block;
+      vertical-align: middle;
+      position: relative;
+    }
+  }
+
+  .content-1-3-shop-desktop {
+    display: none;
+    @include media(m) {
+      width: 22%;
+      margin: 0 auto;
+      display: block;
+      vertical-align: middle;
+      position: relative;
+      display: block;
+    }
+  }
+
   .content-1-3 a {
     color: red;
     text-decoration: line-through;
@@ -760,19 +830,30 @@ li:hover {
     padding-top: 12px;
     font-size: 12px;
     font-weight: 300;
+    padding-bottom: 20px;
     @include media(m) {
       padding-top: 15px;
       font-size: 16px;
       font-weight: 300;
+      padding-bottom: 10px;
     }
   }
 
   .content-1-3a p {
-    padding-top: 15px;
-    font-size: 16px;
+    padding-top: 12px;
+    font-size: 12px;
     font-weight: 300;
     font-style: italic;
+    padding-bottom: 20px;
+    @include media(m) {
+      padding-top: 15px;
+      font-size: 16px;
+      font-weight: 300;
+      font-style: italic;
+      padding-bottom: 10px;
+    }
   }
+
 
   .content-1-3a p:hover {
     color: #B3A0F2;
@@ -848,6 +929,26 @@ li:hover {
     color: white;
   }
 
+  .button-mobile {
+    display: block;
+    width: 100%;
+    height: 20px;
+    padding-right: 20vw;
+    padding-left: 20vw;
+    @include media(m) {
+      display: none;
+    }
+  }
+
+  .padding-mobile {
+    height: 50px;
+    @include media(m) {
+      display: none;
+    }
+  }
+
+
+
   .instafeed {
     width:100%;
     margin:0 auto;
@@ -857,10 +958,27 @@ li:hover {
   }
 
   .content-1-7 {
-    width: 14.286%;
+    width: 25%;
     margin: 0 auto;
     vertical-align: middle;
     position: relative;
+    @include media(m) {
+      width: 14.286%;
+      margin: 0 auto;
+      vertical-align: middle;
+      position: relative;
+    }
+  }
+
+  .content-1-7a {
+    display: none;
+    @include media(m) {
+      width: 14.286%;
+      margin: 0 auto;
+      vertical-align: middle;
+      position: relative;
+      display: block;
+    }
   }
 
   .content-1-7:hover {
@@ -980,10 +1098,14 @@ li:hover {
   }
 
   .card-5-3 {
-    grid-column: span 5;
-    grid-row: span 3;
-    font-weight: 300;
-    font-size: 11px;
+    display: none;
+    @include media(m) {
+      display: block;
+      grid-column: span 5;
+      grid-row: span 3;
+      font-weight: 300;
+      font-size: 11px;
+    }
   }
 
   .card-5-3 p {
