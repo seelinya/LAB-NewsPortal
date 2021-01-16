@@ -311,13 +311,33 @@ li:hover {
 }
 
 .column-12-text {
-  grid-column: span 12;
+  grid-column: span 24;
   font-weight: 300;
   font-size: 12px;
   letter-spacing: 0.02rem;
   font-style: italic;
   @include media(m) {
     grid-column: span 12;
+}
+}
+
+.column-12-text-mobile {
+  grid-column: span 24;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.02rem;
+  font-style: italic;
+  padding-bottom: 5rem;
+  @include media(m) {
+    grid-column: span 12;
+}
+}
+
+.column-24-text {
+  grid-column: span 24;
+  display: block;
+  @include media(m) {
+    display: none;
 }
 }
 
@@ -411,8 +431,12 @@ li:hover {
 }
 
 .card-4-2 {
-  grid-column: span 4;
+  grid-column: span 8;
   grid-row: span 1;
+  @include media(m) {
+    grid-column: span 4;
+    grid-row: span 1;
+  }
 }
 
 .card-6-5 {
@@ -472,6 +496,20 @@ li:hover {
     grid-template-rows: repeat(14, 1fr);
     grid-row-gap: 1rem;
     height: 23rem;
+  }
+}
+
+.grid-24-14-mobile {
+  display: block;
+  grid-auto-flow: dense;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-column-gap: 1rem;
+  grid-template-rows: repeat(10, 1fr);
+  grid-row-gap: 1rem;
+  height: 15rem;
+  @include media(m) {
+    display: none;
   }
 }
 
@@ -574,6 +612,16 @@ li:hover {
   }
 }
 
+.teaser-12-12 {
+  grid-column: span 12;
+  //grid-row: span 12;
+  position: relative;
+  display: block;
+  @include media(m) {
+    display: none;
+  }
+}
+
 .teaser-10-7 {
   grid-column: span 12;
   grid-row: span 9;
@@ -632,10 +680,23 @@ li:hover {
   top: 0;
   right: 0;
   background-color: rgb(255, 0, 0, 0.8);
-  padding: 10px;
+  padding: 8px;
   font-family: 'Roboto', light;
-  font-size: 12px;
+  font-size: 8px;
   letter-spacing: 0.03rem;
+  @include media(m) {
+    background-color: black;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 0, 0, 0.8);
+    padding: 10px;
+    font-family: 'Roboto', light;
+    font-size: 12px;
+    letter-spacing: 0.03rem;
+  }
 }
 
 
@@ -655,6 +716,48 @@ li:hover {
   padding-left: 15px;
   padding-right: 10px;
   padding-bottom: 10px;
+}
+
+
+.bild-mobile {
+  display: block;
+  @include media(m) {
+    display: none;
+  }
+}
+
+.bild-desktop {
+  display: none;
+  @include media(m) {
+    display: block;
+  }
+}
+
+.teaser-box1 {
+  text-align: left;
+  color: black;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(255, 255, 255, 0.9);
+  width: 95%;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  @include media(m) {
+    text-align: left;
+    color: black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255, 0.9);
+    width: 95%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .teaser-box-klein {
@@ -700,6 +803,19 @@ li:hover {
 }
 
 .teaser-box img {
+  height: 12px;
+  width: auto;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  // width: auto;
+  //width: 2rem;
+  // padding-left: 75%;
+  // padding-bottom: 10px;
+  // padding-right: 10%;
+}
+
+.teaser-box1 img {
   height: 12px;
   width: auto;
   position: absolute;
@@ -947,6 +1063,13 @@ li:hover {
     }
   }
 
+  .padding-mobile05 {
+    height: 20px;
+    @include media(m) {
+      display: none;
+    }
+  }
+
 
 
   .instafeed {
@@ -1009,11 +1132,18 @@ li:hover {
 
 
   .card-mail {
-    grid-column: span 8;
+    grid-column: span 24;
     grid-row-start: 2;
     grid-row-end: 2;
     font-weight: 300;
     font-size: 11px;
+    @include media(m) {
+      grid-column: span 8;
+      grid-row-start: 2;
+      grid-row-end: 2;
+      font-weight: 300;
+      font-size: 11px;
+    }
   }
 
   .card-mail-button {
@@ -1025,9 +1155,14 @@ li:hover {
   }
 
   .card-button-position {
-    grid-column: span 8;
+    grid-column: span 19;
     grid-row-start: 3;
     grid-row-end: 3;
+    @include media(m) {
+      grid-column: span 8;
+      grid-row-start: 3;
+      grid-row-end: 3;
+  }
   }
 
   .white-mail {
@@ -1035,8 +1170,8 @@ li:hover {
   }
 
   .anmelden-mail {
-    grid-column-start: 6;
-    grid-column-end: 6;
+      grid-column-start: 6;
+      grid-column-end: 6;
   }
 
   .card-mail-button2 {
@@ -1047,17 +1182,48 @@ li:hover {
   }
 
   .card-social {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    grid-row-end: 4;
+    grid-column-start: 21;
+    grid-column-end: 22;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    @include media(m) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 4;
+      grid-row-end: 4;
+  }
+  }
+
+  .card-social img {
+    width: 20px;
+    height: 20px;
+    @include media(m) {
+      width: 20px;
+      height: 20px;
+  }
   }
 
   .card-social1 {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 4;
+    grid-column-start: 23;
+    grid-column-end: 24;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    @include media(m) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 4;
+      grid-row-end: 4;
+  }
+  }
+
+  .card-social1 img {
+    width: 10px;
+    height: 20px;
+    @include media(m) {
+      margin-left: 5px;
+      width: 10px;
+      height: 20px;
+  }
   }
 
   .inner2 {
@@ -1075,8 +1241,8 @@ li:hover {
   }
 
   .inner1a {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
     padding-top: 7px;
     padding-bottom: 7px;
     color: white;
@@ -1087,6 +1253,20 @@ li:hover {
     letter-spacing: 0.02rem;
     font-size: 12px;
     //margin: 0 auto;
+    @include media(m) {
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      color: white;
+      background-color: #B3A0F2;
+      //border: 0.1rem solid black;
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: 0.02rem;
+      font-size: 12px;
+      //margin: 0 auto;
+  }
   }
 
   .inner1a:hover {
@@ -1117,24 +1297,21 @@ li:hover {
   }
 
   .card-1-5 {
-    grid-column: span 1;
-    grid-row: span 5;
+    display: none;
+    @include media(m) {
+      grid-column: span 1;
+      grid-row: span 5;
+      display: block;
+    }
   }
 
   .card-4-2 img {
-    padding-top: 20px;
+    padding-top: 30px;
+    @include media(m) {
+      padding-top: 20px;
+    }
   }
 
-  .card-social img {
-    width: 20px;
-    height: 20px;
-  }
-
-  .card-social1 img {
-    margin-left: 5px;
-    width: 10px;
-    height: 20px;
-  }
 
   @media only screen and (max-width: 920px) {
 
@@ -1165,5 +1342,71 @@ li:hover {
       top: 0;
       left: 0;
       height: 7rem;
+    }
+  }
+
+  .nav-footer {
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 4rem;
+    display: block;
+    @include media(m) {
+      display: none;
+    }
+  }
+
+  .grid-5-footerfix {
+    //grid-auto-flow: dense;
+    display: block;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 0.2rem;
+    grid-template-rows: repeat(1, 1fr);
+    grid-row-gap: 0.5rem;
+    height: 150px;
+    display: grid;
+    @include media(m) {
+      display: none;
+    }
+  }
+
+
+  .footerfix1 {
+    grid-column: span 1;
+    grid-row: span 1;
+    display: block;
+    @include media(m) {
+      display: none;
+    }
+  }
+
+  .footerfix1a {
+    grid-column: span 1;
+    grid-row: span 1;
+    display: block;
+    @include media(m) {
+      display: none;
+    }
+  }
+
+  .footerfix1 img {
+    height: 50px;
+    padding-top: 22px;
+    padding-bottom: 10px;
+  }
+
+  .footerfix1a img {
+    height: 48px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+  }
+
+  .hr-mobile {
+    display: none;
+    @include media(m) {
+      display: block;
     }
   }
