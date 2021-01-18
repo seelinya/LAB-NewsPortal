@@ -496,9 +496,13 @@ li:hover {
 
 .column-100-text {
   width: 100%;
-  padding-left: 14px;
+  padding-right: 14px;
 }
 
+.column-100-texta {
+  width: 100%;
+  padding-left: 16px;
+}
 
 
 .card-1-12 {
@@ -1398,7 +1402,7 @@ li:hover {
 .container--first {
   padding-top: 4rem;
   @include media(m) {
-    padding-top: 6rem;
+    padding-top: 5.5rem;
   }
 }
 
