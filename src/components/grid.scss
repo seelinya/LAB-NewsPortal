@@ -1236,7 +1236,7 @@ li:hover {
   }
 
   .card-button-position {
-    grid-column: span 19;
+    grid-column: span 20;
     grid-row-start: 3;
     grid-row-end: 3;
     @include media(m) {
@@ -1263,11 +1263,15 @@ li:hover {
   }
 
   .card-social {
+    padding-top: 5px;
     grid-column-start: 21;
-    grid-column-end: 22;
+    grid-column-end: 23;
     grid-row-start: 3;
     grid-row-end: 3;
+    display: flex;
+    justify-content: flex-end;
     @include media(m) {
+     justify-content: flex-start;
       grid-column-start: 1;
       grid-column-end: 3;
       grid-row-start: 4;
@@ -1285,11 +1289,15 @@ li:hover {
   }
 
   .card-social1 {
+    padding-top: 5px;
     grid-column-start: 23;
-    grid-column-end: 24;
+    grid-column-end: 25;
     grid-row-start: 3;
     grid-row-end: 3;
+    display: flex;
+    justify-content: flex-end;
     @include media(m) {
+      justify-content: flex-start;
       grid-column-start: 2;
       grid-column-end: 4;
       grid-row-start: 4;
