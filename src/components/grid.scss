@@ -475,7 +475,7 @@ li:hover {
   font-size: 12px;
   letter-spacing: 0.02rem;
   font-style: italic;
-  padding-bottom: 130px;
+  padding-bottom: 125px;
   @include media(m) {
     grid-column: span 12;
 }
@@ -758,6 +758,14 @@ li:hover {
 }
 
 .teaser-box:hover {
+  color: #B3A0F2;
+}
+
+.teaser-box1:hover {
+  color: #B3A0F2;
+}
+
+.teaser-box-gross:hover {
   color: #B3A0F2;
 }
 
